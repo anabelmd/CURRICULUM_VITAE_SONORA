@@ -69,6 +69,8 @@ section {
   top: 0;
   left: 0;
   transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px; /* Agrega un espacio interno para el contenido */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total del elemento */
 }
 
 #datos-personales img {
@@ -135,6 +137,10 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
+  section {
+    padding: 10px; /* Ajusta el espacio interno para dispositivos móviles */
+    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+  }
   /* Estilos específicos para pantallas más pequeñas */
   .container {
     margin-top: 60px; /* Ajusta según sea necesario para evitar que el encabezado tape los títulos en móviles */
