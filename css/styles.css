@@ -136,6 +136,9 @@ ul {
 
 @media screen and (max-width: 600px) {
   /* Estilos específicos para pantallas más pequeñas */
+  body {
+    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+  }
 }
 footer {
   /* ... otros estilos ... */
