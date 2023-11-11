@@ -137,22 +137,32 @@ ul {
 }
 
 @media screen and (max-width: 600px) {
-  section {
-    padding: 10px; /* Ajusta el espacio interno para dispositivos móviles */
-    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
-  }
-  /* Estilos específicos para pantallas más pequeñas */
   .container {
-    margin-top: 60px; /* Ajusta según sea necesario para evitar que el encabezado tape los títulos en móviles */
+    margin-top: 80px; /* Ajusta según sea necesario para evitar que el encabezado tape los títulos en móviles */
+    padding-top: 20px; /* Ajusta el espacio entre el inicio de la página y la primera sección */
   }
-  h2 {
+
+  .header {
+    padding: 5px;
+  }
+
+  .logo {
+    width: 70px; /* Ajusta el tamaño de la foto */
+  }
+
+  .header-content {
+    margin-left: 10px; /* Ajusta el espacio entre el logo y el texto */
+  }
+
+  h1 {
     font-size: 1.5em; /* Ajusta el tamaño del título según sea necesario */
-    margin-bottom: 10px; /* Ajusta el espacio entre el título y el párrafo */
+    margin-bottom: 5px; /* Ajusta el espacio entre el título y el párrafo */
   }
-  body {
-    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+
+  h2 {
+    font-size: 1.2em; /* Ajusta el tamaño del título según sea necesario */
+    margin-bottom: 5px; /* Ajusta el espacio entre el título y el párrafo */
   }
-}
 footer {
   /* ... otros estilos ... */
   font-size: 0.8em; /* Puedes ajustar el tamaño según sea necesario */
