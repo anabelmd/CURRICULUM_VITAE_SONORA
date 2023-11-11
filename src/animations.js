@@ -1,7 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
+  const datosPersonalesSection = document.getElementById('datos-personales');
+  let datosPersonalesVisible = false;
   let currentSectionIndex = 0;
-  let touchStartY;
+
+  let startY;
+
+  function handleTouchStart(event) {
+    startY = event.touches[0].clientY;
+  }
+
+  function handleTouchMove(event) {
+    const deltaY = event.touches[0].clientY - startY;
+
+    if (deltaY > 50 && currentSectionIndex > 0) {
+      currentSectionIndex--;
+    } else if (deltaY < -50 && currentSectionIndex < sections.length - 1) {
+      currentSectionIndex++;
+    }
+
+    showCurrentSection();
+  }
 
   function showCurrentSection() {
     sections.forEach((section, index) => {
@@ -22,22 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     showCurrentSection();
   });
 
-  document.addEventListener('touchstart', function (event) {
-    touchStartY = event.touches[0].clientY;
-  });
-
-  document.addEventListener('touchend', function (event) {
-    const touchEndY = event.changedTouches[0].clientY;
-    const delta = touchEndY - touchStartY;
-
-    if (delta > 50 && currentSectionIndex > 0) {
-      currentSectionIndex--;
-    } else if (delta < -50 && currentSectionIndex < sections.length - 1) {
-      currentSectionIndex++;
-    }
-
-    showCurrentSection();
-  });
+  document.addEventListener('touchstart', handleTouchStart);
+  document.addEventListener('touchmove', handleTouchMove);
 
   showCurrentSection();
 });
