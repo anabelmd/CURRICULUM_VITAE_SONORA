@@ -163,6 +163,7 @@ ul {
     font-size: 1.2em; /* Ajusta el tamaño del título según sea necesario */
     margin-bottom: 5px; /* Ajusta el espacio entre el título y el párrafo */
   }
+}
 footer {
   /* ... otros estilos ... */
   font-size: 0.8em; /* Puedes ajustar el tamaño según sea necesario */
