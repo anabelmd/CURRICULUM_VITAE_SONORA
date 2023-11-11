@@ -1,0 +1,146 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ... (otros estilos) ... */
+
+/* ... (otros estilos) ... */
+/* ... (otros estilos) ... */
+/* ... (otros estilos) ... */
+
+/* ... (otros estilos) ... */
+
+.header {
+  display: flex;
+  flex-direction: row; /* Cambiado a fila para colocar la foto a la izquierda */
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que esté encima del contenido al hacer scroll */
+}
+
+.logo {
+  width: 100px; /* Aumentado el tamaño de la foto */
+  height: auto;
+  margin-right: 0px; /* Añade margen derecho para separar la foto del contenido */
+  border-radius: 50%;
+}
+
+.header-content {
+  color: #fff;
+  text-align: left;
+margin-left:30px;  /* Centra el contenido */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center; /* Añadido para centrar los elementos horizontalmente */
+  justify-content: center; /* Añadido para centrar los elementos verticalmente */
+ 
+}
+
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+section {
+  min-height: 100%;
+  width: 100%;
+  background-color: #1a1a1a;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#datos-personales img {
+  width: 150px; /* Ajusta el ancho según sea necesario */
+  height: auto; /* Mantén la proporción de la imagen */
+  border-radius: 50%; /* Haz que la imagen sea redonda */
+  margin-bottom: 20px; /* Agrega espacio debajo de la imagen */
+}
+
+
+
+
+h1, h2 {
+  color: #9147ff;
+  font-size: 2em; /* Aumentado el tamaño de la fuente */
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #9147ff;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scroll-indicator {
+  display: inline-block;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  padding: 5px;
+  transform: rotate(-45deg);
+  margin-left: 5px;
+  animation: scrollBounce 1s infinite;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  
+  
+}
+
+@media screen and (max-width: 600px) {
+  /* Estilos específicos para pantallas más pequeñas */
+}
+footer {
+  /* ... otros estilos ... */
+  font-size: 0.8em; /* Puedes ajustar el tamaño según sea necesario */
+}
+
+
+
