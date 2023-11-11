@@ -136,6 +136,9 @@ ul {
 
 @media screen and (max-width: 600px) {
   /* Estilos específicos para pantallas más pequeñas */
+  .container {
+    margin-top: 60px; /* Ajusta según sea necesario para evitar que el encabezado tape los títulos en móviles */
+  }
   h2 {
     font-size: 1.5em; /* Ajusta el tamaño del título según sea necesario */
     margin-bottom: 10px; /* Ajusta el espacio entre el título y el párrafo */
