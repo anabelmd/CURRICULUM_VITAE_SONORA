@@ -7,17 +7,9 @@ body {
   overflow: hidden;
 }
 
-/* ... (otros estilos) ... */
-
-/* ... (otros estilos) ... */
-/* ... (otros estilos) ... */
-/* ... (otros estilos) ... */
-
-/* ... (otros estilos) ... */
-
 .header {
   display: flex;
-  flex-direction: row; /* Cambiado a fila para colocar la foto a la izquierda */
+  flex-direction: row;
   align-items: center;
   background-color: #1a1a1a;
   padding: 10px;
@@ -25,31 +17,29 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que esté encima del contenido al hacer scroll */
+  z-index: 1000;
 }
 
 .logo {
-  width: 100px; /* Aumentado el tamaño de la foto */
+  width: 100px;
   height: auto;
-  margin-right: 0px; /* Añade margen derecho para separar la foto del contenido */
+  margin-right: 0px;
   border-radius: 50%;
 }
 
 .header-content {
   color: #fff;
   text-align: left;
-margin-left:30px;  /* Centra el contenido */
+  margin-left: 30px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  align-items: center; /* Añadido para centrar los elementos horizontalmente */
-  justify-content: center; /* Añadido para centrar los elementos verticalmente */
- 
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
 }
-
 
 .centered {
   display: flex;
@@ -69,23 +59,23 @@ section {
   top: 0;
   left: 0;
   transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 20px; /* Agrega un espacio interno para el contenido */
-  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total del elemento */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Agregado para permitir el desplazamiento en secciones largas */
+  max-height: 100vh; /* Limitar la altura de la sección al tamaño de la pantalla */
 }
 
 #datos-personales img {
-  width: 150px; /* Ajusta el ancho según sea necesario */
-  height: auto; /* Mantén la proporción de la imagen */
-  border-radius: 50%; /* Haz que la imagen sea redonda */
-  margin-bottom: 20px; /* Agrega espacio debajo de la imagen */
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
-
-
-
-h1, h2 {
+h1,
+h2 {
   color: #9147ff;
-  font-size: 2em; /* Aumentado el tamaño de la fuente */
+  font-size: 2em;
 }
 
 .fade-in {
@@ -132,14 +122,12 @@ ul {
   60% {
     transform: translateY(-5px);
   }
-  
-  
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 360px) {
   .container {
-    margin-top: 80px; /* Ajusta según sea necesario para evitar que el encabezado tape los títulos en móviles */
-    padding-top: 20px; /* Ajusta el espacio entre el inicio de la página y la primera sección */
+    margin-top: 40px;
+    padding-top: 10px;
   }
 
   .header {
@@ -147,27 +135,38 @@ ul {
   }
 
   .logo {
-    width: 70px; /* Ajusta el tamaño de la foto */
+    width: 60px;
   }
 
   .header-content {
-    margin-left: 10px; /* Ajusta el espacio entre el logo y el texto */
+    margin-left: 10px;
   }
 
   h1 {
-    font-size: 1.5em; /* Ajusta el tamaño del título según sea necesario */
-    margin-bottom: 5px; /* Ajusta el espacio entre el título y el párrafo */
+    font-size: 1.2em;
+    margin-bottom: 5px;
   }
 
   h2 {
-    font-size: 1.2em; /* Ajusta el tamaño del título según sea necesario */
-    margin-bottom: 5px; /* Ajusta el espacio entre el título y el párrafo */
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  p {
+    font-size: 0.8em;
+    line-height: 1.3em;
+  }
+
+  ul li {
+    font-size: 0.8em;
+    line-height: 1.3em;
   }
 }
+
 footer {
-  /* ... otros estilos ... */
-  font-size: 0.8em; /* Puedes ajustar el tamaño según sea necesario */
+  font-size: 0.8em;
 }
-
-
-

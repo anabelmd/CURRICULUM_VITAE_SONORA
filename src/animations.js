@@ -10,24 +10,23 @@ document.addEventListener('DOMContentLoaded', function () {
     startY = event.touches[0].clientY;
   }
 
-  function handleTouchEnd() {
-    // Detecta la dirección del desplazamiento y actualiza el índice de la sección actual
+  function handleTouchEnd(event) {
     const deltaY = event.changedTouches[0].clientY - startY;
     if (deltaY > 50 && currentSectionIndex > 0) {
       currentSectionIndex--;
     } else if (deltaY < -50 && currentSectionIndex < sections.length - 1) {
       currentSectionIndex++;
     }
+    showCurrentSection();
   }
+
   function handleTouchMove(event) {
     const deltaY = event.touches[0].clientY - startY;
-
     if (deltaY > 50 && currentSectionIndex > 0) {
       currentSectionIndex--;
     } else if (deltaY < -50 && currentSectionIndex < sections.length - 1) {
       currentSectionIndex++;
     }
-
     showCurrentSection();
   }
 
@@ -40,15 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.addEventListener('wheel', function (event) {
     const delta = Math.sign(event.deltaY);
-
     if (delta === 1 && currentSectionIndex < sections.length - 1) {
       currentSectionIndex++;
     } else if (delta === -1 && currentSectionIndex > 0) {
       currentSectionIndex--;
     }
-
     showCurrentSection();
   });
+
   document.addEventListener('touchend', handleTouchEnd);
   document.addEventListener('touchstart', handleTouchStart);
   document.addEventListener('touchmove', handleTouchMove);
