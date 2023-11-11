@@ -136,6 +136,10 @@ ul {
 
 @media screen and (max-width: 600px) {
   /* Estilos específicos para pantallas más pequeñas */
+  h2 {
+    font-size: 1.5em; /* Ajusta el tamaño del título según sea necesario */
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y el párrafo */
+  }
   body {
     font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
   }
